@@ -22,9 +22,9 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 			if (r)
 				nr = binary_tree_leaves(r);
 		}
+		n = nl + nr;
 		if (l == NULL && r == NULL)
 			return (1);
-		n = nl + nr;
 	}
 	return (n);
 }
