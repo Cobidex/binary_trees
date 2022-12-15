@@ -13,8 +13,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 	b = binary_tree_balance(tree);
 	f = binary_tree_is_full(tree);
-
-	return ((b && f) ? 1 : 0);
+	if (b == 0 && f == 1)
+		return (1);
+	return (0);
 }
 
 /**
